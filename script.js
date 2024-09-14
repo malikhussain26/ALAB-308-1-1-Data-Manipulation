@@ -6,6 +6,16 @@ const n2 = 15;
 const n3 = 20;
 const n4 = 5;
 
+const isSum50 = (n1 + n2 + n3 + n4) == 50;
+const isTwoOdd = (n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2;
+const isOver25 = n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25;
+const isUnique = n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4;
+const isValid = isSum50 && isTwoOdd && !isOver25 && isUnique;
+const dontDoThis = ((n1 + n2 + n3 + n4) == 50) && 
+  ((n1 % 2) + (n2 % 2) + (n3 % 2) + (n4 % 2) >= 2) && 
+  !(n1 > 25 || n2 > 25 || n3 > 25 || n4 > 25) && 
+  (n1 != n2 && n1 != n3 && n1 != n4 && n2 != n3 && n2 != n4 && n3 != n4);
+
 // Check if all numbers are divisible by 5. Cache the result in a variable.
    const remainder1 = n1 % 5
     console.log(remainder1);
@@ -40,46 +50,47 @@ console.log(product)
 const myRemainder = product % 5
 console.log(myRemainder);
 // Change the way that isOver25 calculates so that we do not need to use the NOT operator (!) in other logic comparisons. Rename the variable as appropriate.
+// Im not sure that I understand this question//
 
 // Part 2 Practical Math
 
 //Trip Variables
-// const totalMiles = 1500;
+const totalMiles = 1500;
 
-// let mpg;
-// let mph = 75;
+let mpg;
+let mph = 75;
 
-// if (mph >= 75) {
-//   mpg = 23;
-// } else if (mph >= 60) {
-//   mpg = 28;
-// } else {
-//   mpg = 30;
-// }
+if (mph >= 75) {
+  mpg = 23;
+} else if (mph >= 60) {
+  mpg = 28;
+} else {
+  mpg = 30;
+}
 
-// const budget = 175;
+const budget = 175;
 
-// const pricePerGallon = 3;
+const pricePerGallon = 3;
 
 // How many gallons of fuel will you need for the entire trip?
-// const gallonsNeeded = totalMiles / mpg;
+const gallonsNeeded = totalMiles / mpg;
 
-// console.log(gallonsNeeded);
+console.log(gallonsNeeded);
 
 // Will your budget be enough to cover the fuel expense?
-// const willBudgetCover = budget > gallonsNeeded * pricePerGallon;
+const willBudgetCover = budget > gallonsNeeded * pricePerGallon;
 
-// console.log(
-//   'Price of total gas needed: ',
-//   gallonsNeeded * pricePerGallon,
-//   'dollars'
-// );
-// console.log('does budget cover gas expense? ', willBudgetCover);
+console.log(
+  'Price of total gas needed: ',
+  gallonsNeeded * pricePerGallon,
+  'dollars'
+);
+console.log('does budget cover gas expense? ', willBudgetCover);
 
 // How long will the trip take, in hours?
-// const tripHours = totalMiles / mph;
+const tripHours = totalMiles / mph;
 
-// console.log('how long will this take?? ' + tripHours.toFixed() + ' hours');
+console.log('how long will this take?? ' + tripHours.toFixed() + ' hours');
 
 // Compare the results when traveling at an average of 55, 60, and 75 miles per hour. Which makes the most sense for the trip?
 
